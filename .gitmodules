@@ -1,3 +1,6 @@
 [submodule "flink"]
 	path = flink
 	url = https://github.com/thedavidchu/flink.git
+[submodule "nexmark-bench"]
+	path = nexmark-bench
+	url = https://github.com/risingwavelabs/nexmark-bench.git
