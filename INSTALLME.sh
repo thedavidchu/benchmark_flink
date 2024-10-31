@@ -41,22 +41,3 @@ git submodule update --init --recursive
 # Download Docker for Apache Flink
 sudo docker pull flink
 
-# (OPTIONAL) Run Docker
-sudo docker run flink:latest jobmanager
-
-
-# # Install Java and Maven
-# sudo apt install default-jre
-# sudo apt install maven
-#
-# # Install Python and Pip
-# sudo apt install python3
-# sudo apt install python3-pip
-#
-# # Build Apache Flink
-# cd "${DIR}/flink"
-# ./mvnw clean package -DskipTests
-# mvn clean install -DskipTests -Dfast -Pskip-webui-build -T 1C
-#
-# python -m pip install -r flink-python/dev/dev-requirements.txt
-
