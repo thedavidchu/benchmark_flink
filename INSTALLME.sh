@@ -35,23 +35,28 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 # 4. (OPTIONAL) Test by running some simply program (not included)
 
-
-# Install Java and Maven
-sudo apt install default-jre
-sudo apt install maven
-
-# Install Python and Pip
-sudo apt install python3
-sudo apt install python3-pip
-
 # Git clone Apache Flink (or clone this directory with 'git clone --recurse-submodules <link-to-this-repo>'
 git submodule update --init --recursive
 
-# Build Apache Flink
-cd "${DIR}/flink"
-./mvnw clean package -DskipTests
-mvn clean install -DskipTests -Dfast -Pskip-webui-build -T 1C
+# Download Docker for Apache Flink
+sudo docker pull flink
 
-python -m pip install -r flink-python/dev/dev-requirements.txt
+# (OPTIONAL) Run Docker
+sudo docker run flink:latest jobmanager
 
+
+# # Install Java and Maven
+# sudo apt install default-jre
+# sudo apt install maven
+#
+# # Install Python and Pip
+# sudo apt install python3
+# sudo apt install python3-pip
+#
+# # Build Apache Flink
+# cd "${DIR}/flink"
+# ./mvnw clean package -DskipTests
+# mvn clean install -DskipTests -Dfast -Pskip-webui-build -T 1C
+#
+# python -m pip install -r flink-python/dev/dev-requirements.txt
 
