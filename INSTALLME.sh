@@ -12,6 +12,18 @@ DIR="$(git rev-parse --show-toplevel)"
 sudo apt update
 sudo apt upgrade
 
+# Install Java (version 11) and Maven (version 3)
+# NOTE  This may be broken on your computer, but it works on mine :P
+sudo apt install default-jre
+sudo apt install default-jdk
+sudo apt install maven
+
+# Install Python (version 3.11)
+# NOTE  My default version on Ubuntu 24.04 is Python 3.12.3.
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.11
+
 # Docker installation
 # Source: https://docs.docker.com/engine/install/ubuntu/
 # 1. Remove any existing Docker packages
