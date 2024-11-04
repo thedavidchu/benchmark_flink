@@ -4,3 +4,6 @@
 [submodule "nexmark-bench"]
 	path = nexmark-bench
 	url = https://github.com/risingwavelabs/nexmark-bench.git
+[submodule "flink-reactive-mode-k8s-demo"]
+	path = flink-reactive-mode-k8s-demo
+	url = https://github.com/rmetzger/flink-reactive-mode-k8s-demo.git
