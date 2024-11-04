@@ -4,7 +4,9 @@
 # Get the path for the 'benchmark_flink' directory
 DIR="$(git rev-parse --show-toplevel)"
 
-mkdir "$DIR/bin" || exit
+if [[ ! -d "$DIR/bin" ]]; then
+  mkdir "$DIR/bin" || exit
+fi
 cd "$DIR/bin" || exit
 
 wget https://dlcdn.apache.org/flink/flink-1.20.0/flink-1.20.0-bin-scala_2.12.tgz
