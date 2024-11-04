@@ -7,3 +7,6 @@
 [submodule "flink-reactive-mode-k8s-demo"]
 	path = flink-reactive-mode-k8s-demo
 	url = https://github.com/rmetzger/flink-reactive-mode-k8s-demo.git
+[submodule "ds2"]
+	path = ds2
+	url = https://github.com/strymon-system/ds2.git
