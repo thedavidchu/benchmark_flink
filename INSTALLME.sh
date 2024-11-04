@@ -7,6 +7,7 @@
 
 # Get the path for the 'benchmark_flink' directory
 DIR="$(git rev-parse --show-toplevel)"
+cd "$DIR"
 
 # Git clone Apache Flink (or clone this directory with 'git clone --recurse-submodules <link-to-this-repo>'
 git submodule update --init --recursive
@@ -23,9 +24,9 @@ sudo apt install maven
 
 # Install Python (version 3.11)
 # NOTE  My default version on Ubuntu 24.04 is Python 3.12.3.
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.11
+# sudo add-apt-repository ppa:deadsnakes/ppa
+# sudo apt-get update
+# sudo apt-get install python3.11
 
 ## Docker installation
 ## Source: https://docs.docker.com/engine/install/ubuntu/
